@@ -20,7 +20,14 @@ body, html {
     border-left: 1px solid #333; border-right: 1px solid #333;
 }
 
-canvas { width: 100%; height: 100%; display: block; }
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
 
 .screen {
     position: absolute; inset: 0;
@@ -129,4 +136,5 @@ input {
 
 @keyframes flicker {
     0% { opacity: 1; } 50% { opacity: 0.8; } 100% { opacity: 1; }
+
 }
