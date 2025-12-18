@@ -23,10 +23,10 @@ class BackgroundManager {
     }
 
     init() {
-        this.type = 'horror';
-        //const rand = Math.random();
+       //this.type = 'horror';
+        const rand = Math.random();
         // 概率分布：恐怖(1%) > 烟花(5%) > 火山(14%) > 雪/风/阴/蓝天(各20%)
-        /*
+        
         if (rand < 0.01) this.type = 'horror';
         else if (rand < 0.06) this.type = 'fireworks';
         else if (rand < 0.20) this.type = 'volcano';
@@ -34,7 +34,7 @@ class BackgroundManager {
         else if (rand < 0.60) this.type = 'wind';
         else if (rand < 0.80) this.type = 'overcast';
         else this.type = 'blue-sky';
-        */
+        
         this.elements = [];
         // 初始化一些背景粒子（云、雪、灰烬等）
         for (let i = 0; i < 25; i++) {
