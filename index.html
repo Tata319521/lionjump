@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The 366th Night</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="ui-layer">
+            <div id="start-screen" class="screen">
+                <h1 class="glitch-text">第366夜</h1>
+                <p>收集时间碎片 · 开启2026</p>
+                <button class="btn" id="start-btn">连接服务器</button>
+            </div>
+
+            <div id="fail-screen" class="screen hidden">
+                <div class="dialog-box" style="border: 2px solid #ff4757; background: rgba(20,0,0,0.95);">
+                    <div style="font-size: 60px; margin-bottom: 10px;">😭</div>
+                    <p style="color: #ff4757; font-weight: bold;">呜，撞晕了</p>
+                    <button class="btn" onclick="startGame()" style="background: #ff4757;">重新来</button>
+                </div>
+            </div>
+
+            <div id="dialog-screen" class="screen hidden">
+                <div class="dialog-box">
+                    <div class="avatar">👨‍💻</div>
+                    <p id="npc-display"></p>
+                    <input type="text" id="user-input" placeholder="输入答案...">
+                    <button class="btn-s" id="submit-btn">发送信号</button>
+                </div>
+            </div>
+
+            <div id="result-screen" class="screen hidden">
+                <div id="result-icon"></div>
+                <h1 id="result-title"></h1>
+                <p id="result-content"></p>
+                <button class="btn-s" onclick="location.reload()">重启系统</button>
+            </div>
+
+            <div id="progress-wrapper">
+                <div id="progress-text">距离2026年：<span id="percent">0</span>%</div>
+                <div id="progress-bar-container">
+                    <div id="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
